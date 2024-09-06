@@ -6,16 +6,16 @@ pipeline {
     }
 
     environment {
-	registry = "devops-weekend"
-	registryCredential = 'dockerhub'
-        DOCKER_IMAGE = 'stepstech/devops-weekend:latest'
-        CONTAINER_NAME = 'webapp2'
+	registry = "devops-weekend"  //DockerHub Regisrty name
+	registryCredential = 'dockerhubnew' //Credential to connect with DOckerHub
+        DOCKER_IMAGE = 'stepstech/devops-weekend:latest' //Docker Image should be available in DockerHub
+        CONTAINER_NAME = 'webapp2' //Container name which will be created 
     }
 
     stages {
         stage ('Fetching code') {
             steps {
-                git branch : 'main' , url: 'https://github.com/devopshydclub/vprofile-project.git'
+                git branch : 'main' , url: 'https://github.com/hkhcoder/vprofile-project.git'
             }
         }
 
@@ -47,7 +47,7 @@ pipeline {
 
         stage ('Sonar Scanner') {
             environment {
-                scannerHome = tool 'sonar4.7'
+                scannerHome = tool 'Sonar4.7'  //Name should be match in Tools section of Jenkins
             }
             steps {
                 withSonarQubeEnv('Sonar') {
@@ -77,11 +77,11 @@ pipeline {
                 nexusArtifactUploader(
                 nexusVersion: 'nexus3',
                 protocol: 'http',
-                nexusUrl: '3.140.66.172:8081',
+                nexusUrl: '172.31.0.170:8081',
                 groupId: 'Test',
                 version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
-                repository: 'vprofile-repo',
-                credentialsId: 'nexuslogin',
+                repository: 'vproject',   // Repo Name of Nexus 
+                credentialsId: 'nexuslogin',  //Id which shoud be match with Credential Section
                 artifacts: [
                     [artifactId: 'vproapp',
                     classifier: '',
