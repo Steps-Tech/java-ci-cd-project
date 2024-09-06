@@ -1,0 +1,32 @@
+---
+- name: Playbook for Webservers
+  hosts: webservers # Replace 'all' with your specific host or group of hosts
+
+  tasks:
+    - name: Ensure Nginx is installed
+      apt:
+        name: nginx
+        state: present
+      become: yes  # If you need sudo privileges
+
+    - name: Ensure Nginx is running
+      service:
+        name: nginx
+        state: started
+      become: yes
+
+- name: Playbook for DBServers
+  hosts: dbservers
+
+  tasks:
+    - name: Ensure Mysql Server Installed
+      apt:
+        name: mysql-server
+        state: present
+      become: yes
+
+    - name: Ensure Mysql Service is running
+      service:
+        name: mysql
+        state: started
+      become: yes
