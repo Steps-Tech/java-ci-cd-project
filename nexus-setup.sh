@@ -1,5 +1,6 @@
 #OS : CentOS-Stream-ec2-9-20221219.0-20230110.0.x86_64-aba856bc-78bf-441c-b25c-980bec33a53f-ami-099eb8ae347032773.4
 #New Changes : java-17-openjdk java-17-openjdk-devel required to run Nexus 
+#nexus Installation on Ubuntu : https://medium.com/@dikkumburage/how-to-install-nexus-repository-on-ubuntu-20-04-lts-4012e23698ad
 
 #!/bin/bash
 yum install java-1.8.0-openjdk.x86_64 wget -y   
