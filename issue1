@@ -1,4 +1,4 @@
-Problem Statement : Was trying to pull the imagre from docker hub but getting below error
+Problem Statement : Was trying to pull the image from docker hub but getting below error
   permission denied while trying to connect to the Docker daemon socket at unix:///var/run/
 
 Solution : 
