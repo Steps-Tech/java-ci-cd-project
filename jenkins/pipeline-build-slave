@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "silver" }
+    agent { label "slave" }
     tools {
         maven  "MAVEN3"
         jdk  "Oracle11"
