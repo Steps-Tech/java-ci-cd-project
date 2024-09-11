@@ -6,7 +6,7 @@ pipeline {
         //Specify Docker Registry Name 
         registry = "devops-weekend"
         //Add Credentials in Jenkins to Connect Dockerhub
-	    registryCredential = 'dockerhub'
+	registryCredential = 'dockerhub'
         //Name Of Docker Image must be available in Dockerhub
         DOCKER_IMAGE = 'stepstech/devops-weekend:latest'
     }
