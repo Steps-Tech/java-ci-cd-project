@@ -1,6 +1,7 @@
 //This Pipeline design to Build the Image from Dockerfile Push to the Dockerhub Pull on Remote Docker Host- 
 //-Scan the Image on Remote Docker Host and Build the Container On Remote Docker Host.
 //Note : When run this Pipeline Change the Port Number at Line Number 125
+//Plugins : ssh-agent,docker,docker-pipeline
 pipeline {
     agent any
 
