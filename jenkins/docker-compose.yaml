@@ -1,0 +1,30 @@
+services:
+  
+  appdb:
+    image: mysql
+    ports:
+      - "3306:3306"
+
+  appweb:
+    image: swati90/steps-web-app:latest
+    ports:
+      - "8086:8080"
+    volumes: 
+      - appdata:/usr/local/tomcat/webapps
+
+volumes:
+  appdata: {}
+ 
+ 
+
+
+ 
+Commands:
+docker compose up
+docker compose ps
+docker compose down
+docker compose start
+docker compose stop
+docker compose rm
+
+
