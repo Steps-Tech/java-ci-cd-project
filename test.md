@@ -1,3 +1,5 @@
 Testing copy button 
 
-apt update 
+```bash
+sudo apt-get update
+```
