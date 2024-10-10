@@ -1,3 +1,3 @@
 ``` bash
-#This code will send to email via Jenkins Pipeline to Gmail
+##This code will send the email notification via Jenkins Pipeline to Gmail
 ```
