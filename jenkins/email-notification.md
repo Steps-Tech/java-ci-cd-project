@@ -1,5 +1,5 @@
 
-## This code will send the email notification via Jenkins Pipeline to Gmail
+## This code will send the email notification via Jenkins Pipeline to Gmail[Success/Failure]
 
 ## Gmail Settings
   * * Go to Manage Google Accounts
